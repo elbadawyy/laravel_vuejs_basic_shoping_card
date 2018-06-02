@@ -1,1 +1,1 @@
-# laravel_vuejs_addTomycartDemo
+# laravel_vuejs_basic_shoping_card
