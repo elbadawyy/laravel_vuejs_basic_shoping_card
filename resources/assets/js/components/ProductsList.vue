@@ -4,9 +4,9 @@
         Product Has Been Added
     </v-alert>
     <v-layout>
-      <v-flex xs12 sm2 offset-sm1 :key="`product-${index}`" v-for="(product, index) in products">
+      <v-flex xs12 sm2 offset-sm1 :key="`product-${index}`" v-for="(product, index) in products" >
         <v-card >
-          <v-card-media :src="product.product_img" height="200px">
+          <v-card-media :src="product.product_img" height="100px">
           </v-card-media>
           <v-card-title primary-title>
             <div>
@@ -14,6 +14,7 @@
               <div>{{product.product_name}}</div>
             </div>
           </v-card-title>
+          <v-list-tile-sub-title>Price :{{ product.product_price}}$</v-list-tile-sub-title>
           <v-card-actions>
             <v-text-field :id="`product_quantity_${product.product_id}`" label="Amount" value="1" type="number" ></v-text-field>
           </v-card-actions>
