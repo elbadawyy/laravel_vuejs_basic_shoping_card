@@ -8,13 +8,13 @@
         <v-card >
           <v-card-media :src="product.product_img" height="100px">
           </v-card-media>
-          <v-card-title primary-title>
+          <v-card-title primary-title style="height: 115px;" >
             <div>
               <h3 class="headline mb-0">{{product.product_name}}</h3>
               <div>{{product.product_name}}</div>
             </div>
           </v-card-title>
-          <v-list-tile-sub-title>Price :{{ product.product_price}}$</v-list-tile-sub-title>
+          <v-list-tile-sub-title style="padding-left: 16px;">Price :{{ product.product_price}}$</v-list-tile-sub-title>
           <v-card-actions>
             <v-text-field :id="`product_quantity_${product.product_id}`" label="Amount" value="1" type="number" ></v-text-field>
           </v-card-actions>
