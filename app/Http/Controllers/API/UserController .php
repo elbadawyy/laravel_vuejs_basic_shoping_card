@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Validator;
+use App\Product;
 
 class UserController extends Controller
 {
@@ -57,5 +58,11 @@ class UserController extends Controller
     {
         $user = Auth::user();
         return response()->json(['success' => $user], $this-> successStatus);
+    }
+
+    public function listProducts()
+    {
+        $products=Product::all();
+        return response()->json(['success' => $products], $this-> successStatus);
     }
 }
