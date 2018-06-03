@@ -18,10 +18,29 @@ use App\Product;
 
 $factory->define(Product::class, function (Faker $faker) {
     static $password;
+    $random_number=rand(1, 3);
+    $product_name="";
+    switch ($random_number) {
+        case 1:
+            $product_name="Mobile";
+            break;
+        case 2:
+            $product_name="Labtop";
+            break;
+        case 3:
+            $product_name="Headphones";
+            break;
+        default:
+            $product_name="product";
+            break;
+    }
+    
+
+
     return [
-        'product_name' => $faker->name,
+        'product_name' => $product_name,
         'product_desc' => 'long desc',
-        'product_img' => '/images/product_'.rand(1, 3).'.jpeg',
+        'product_img' => '/images/product_'. $random_number .'.jpeg',
         'product_price' => rand(100, 1000),
     ];
 });

@@ -19,7 +19,11 @@
         </tr>
         </tbody>
     </table>
-          
+    <v-card-text style="height: 300px;" class="grey lighten-5 text-xs-center">
+      <v-btn color="blue" style="color:white;" @click.native="true" href="/index.php/shop">
+      Go Back Shopping 
+      </v-btn>
+    </v-card-text> 
   </div>
 </template>
 <script>
@@ -34,16 +38,12 @@ export default {
       axios.get('ajax/getAllCartItem', { })
         .then((response)=>{
             if(response){
-                console.log('respone',response.data)
                 this.products = response.data;
-                console.log('this.products ',this.products );
             }
         });
 
   },
   methods: {
-   removeFromCart(product){
-   }
   }
 }
 </script>
